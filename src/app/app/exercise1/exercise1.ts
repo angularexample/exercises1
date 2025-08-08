@@ -5,7 +5,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   selector: 'app-exercise1',
   imports: [],
   templateUrl: './exercise1.html',
-  styleUrl: './exercise1.css',
+  styleUrl: './exercise1.scss',
   standalone: true,
 })
 export class Exercise1 {
