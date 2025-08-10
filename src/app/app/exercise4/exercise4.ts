@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './exercise4.scss'
 })
 export class Exercise4 {
+  items: number = 0;
 
+  decrementItem() {
+    this.items--;
+  }
+
+  incrementItem() {
+    this.items++;
+  }
 }

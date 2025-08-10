@@ -1,1 +1,35 @@
-<p>exercise3 works!</p>
+<style>
+  .my-counter {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    width: 100px;
+  }
+</style>
+
+<section>
+  <h2>exercise3 - JavaScript Simple Counter</h2>
+  <p class="my-counter">
+    <button onclick="decrementItem()">-</button>
+    <span id="my-items">0</span>
+    <button onclick="incrementItem()">+</button>
+  </p>
+</section>
+
+<script>
+  let items = 0;
+  let itemsString = '0';
+  const itemsElement = document.getElementById('my-items');
+
+  function incrementItem() {
+    items++;
+    itemsString = items.toString();
+    itemsElement.textContent = itemsString;
+  }
+
+  function decrementItem() {
+    items--;
+    itemsString = items.toString();
+    itemsElement.textContent = itemsString;
+  }
+</script>
