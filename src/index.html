@@ -11,6 +11,9 @@
 <body>
   <app-root></app-root>
 
+<!--  Inline script only works on the index.html page, with the CSP meta tag in the head.-->
+<!--  Comment out all this code, or remove the comments to see it work.-->
+
 <!--  <style>-->
 <!--    .my-counter {-->
 <!--      display: flex;-->
@@ -21,11 +24,13 @@
 <!--  </style>-->
 
 <!--  <section>-->
-<!--    <h2>exercise3 - JavaScript Simple Counter</h2>-->
+<!--    <h2>JavaScript Simple Counter - Add Event Handler</h2>-->
 <!--    <p class="my-counter">-->
-<!--      <button onclick="decrementItem()">-</button>-->
+<!--      <button id="my-decrement-button">-</button>-->
+<!--      &lt;!&ndash;      <button onclick="decrementItem()">-</button>&ndash;&gt;-->
 <!--      <span id="my-items">0</span>-->
-<!--      <button onclick="incrementItem()">+</button>-->
+<!--      <button id ="my-increment-button">+</button>-->
+<!--      &lt;!&ndash;      <button onclick="incrementItem()">+</button>&ndash;&gt;-->
 <!--    </p>-->
 <!--  </section>-->
 
@@ -33,7 +38,11 @@
 <!--    let items = 0;-->
 <!--    let itemsString = '0';-->
 <!--    const itemsElement = document.getElementById('my-items');-->
-
+<!--    const incrementButton = document.getElementById('my-increment-button');-->
+<!--    const decrementButton = document.getElementById('my-decrement-button');-->
+<!--    incrementButton.addEventListener('click', incrementItem);-->
+<!--    decrementButton.addEventListener('click', decrementItem);-->
+<!--    -->
 <!--    function incrementItem() {-->
 <!--      items++;-->
 <!--      itemsString = items.toString();-->

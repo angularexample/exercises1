@@ -149,3 +149,13 @@ add the import for the new component.
 ```typescript
 import {Exercise3} from './app/exercise3/exercise3';
 ```
+### Here is the Empty Section HTML for each exercise page.
+
+```html
+<section>
+  <h2>exercise3 - </h2>
+  <p>
+  </p>
+</section>
+```
+
