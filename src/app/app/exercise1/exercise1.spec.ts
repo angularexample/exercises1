@@ -10,7 +10,7 @@ describe('Exercise1', () => {
     await TestBed.configureTestingModule({
       imports: [Exercise1]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(Exercise1);
     component = fixture.componentInstance;
