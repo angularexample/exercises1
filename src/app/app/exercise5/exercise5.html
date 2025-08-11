@@ -1,5 +1,31 @@
 <section>
-  <h2>exercise5 - </h2>
+  <h2>exercise5 - Sort Using Select</h2>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Role</th>
+    </tr>
+    @for (user of users; track user.id) {
+    <tr>
+      <td>{{user.id}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.role}}</td>
+    </tr>
+    }
+  </table>
   <p>
+    <label for="field-select">Choose a field to sort:</label>
+    <select #fieldSelect class="my-select" id="field-select" name="fieldSelect"  (change)="onSelectionChange($event)">
+      @for (field of fields; track field) {
+      <option value="{{field}}">{{field}}</option>
+      }
+    </select>
   </p>
 </section>
