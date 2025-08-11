@@ -100,10 +100,10 @@ export class Exercise5 {
       role: 'moderator'
     }
   ];
-  protected users: MyUser[] = this.usersRaw;
+  protected users: MyUser[] = [...this.usersRaw];
   protected readonly fields: string[] = Object.keys(this.usersRaw[0]);
 
-  protected onSelectionChange(event: any) {
+  protected onSelectionChange(event: any):void {
     if (event.target.value) {
       const selectedField: string = event.target.value;
       this.sortArrayOfObjects(this.users, selectedField);
