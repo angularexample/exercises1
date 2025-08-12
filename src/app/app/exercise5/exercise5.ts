@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 export interface MyUser {
   id: number;
@@ -17,7 +17,6 @@ export interface MyUser {
   styleUrl: './exercise5.scss'
 })
 export class Exercise5 {
-  @ViewChild('fieldSelect') fieldSelectElement: ElementRef | undefined;
   protected readonly usersRaw: MyUser[] = [
     {
       id: 1,
@@ -103,7 +102,7 @@ export class Exercise5 {
   protected users: MyUser[] = [...this.usersRaw];
   protected readonly fields: string[] = Object.keys(this.usersRaw[0]);
 
-  protected onSelectionChange(event: any):void {
+  protected onSelectionChange(event: any): void {
     if (event.target.value) {
       const selectedField: string = event.target.value;
       this.sortArrayOfObjects(this.users, selectedField);
