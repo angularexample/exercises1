@@ -1,19 +1,17 @@
-<p>exercise7 works!</p>
-<section>
-  <h2>exercise7 - CoderByte Todo List</h2>
+<h2>exercise7 - CoderByte Todo List</h2>
 
-  <form [formGroup]="todoForm" (ngSubmit)="addTask()">
-    <input type="text" formControlName="title">
-    <button type="submit" [disabled]="todoForm.invalid">Submit</button>
-  </form>
+<form [formGroup]="todoForm" (ngSubmit)="addTask()">
+  <input type="text" formControlName="title">
+  <button type="submit" [disabled]="todoForm.invalid">Submit</button>
+</form>
 
-  <table>
-    @for(task of tasks;track task.title){
-      <tr>
-        <td>{{task.title}}</td>
-        <td><button (click)="removeTask(task)">Remove</button></td>
-      </tr>
-    }
-  </table>
-
-</section>
+<table>
+  @for (task of tasks; track task.title) {
+    <tr>
+      <td>{{ task.title }}</td>
+      <td>
+        <button (click)="removeTask(task)">Remove</button>
+      </td>
+    </tr>
+  }
+</table>

@@ -1,1 +1,25 @@
-<p>exercise8 works!</p>
+<h2>exercise8 - CoderByte Person Form</h2>
+
+<form [formGroup]="personForm" (ngSubmit)="updatePerson()">
+  <table>
+    <tr>
+      <label for="firstname">First Name</label>
+      <input id="firstname" type="text" formControlName="firstname" value="{{person.firstname}}">
+    </tr>
+    <tr>
+      <label for="lastname">Last Name</label>
+      <input id="lastname" type="text" formControlName="lastname" value="{{person.lastname}}">
+    </tr>
+    <tr>
+      <label for="age">Age</label>
+      <input id="age" type="number" formControlName="age" value="{{person.age}}">
+    </tr>
+    <tr>
+      <label for="twitter">Twitter</label>
+      <input id="twitter" type="text" formControlName="twitter" value="{{person.twitter}}">
+    </tr>
+  </table>
+  <input type="submit" value="Submit" [disabled]="personForm.invalid">
+</form>
+
+<pre>{{ person | json }}</pre>
